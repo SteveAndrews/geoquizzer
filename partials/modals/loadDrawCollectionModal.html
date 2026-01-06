@@ -1,0 +1,33 @@
+﻿<div id="loadDrawCollectionModal" class="modal fade" tabindex="-1" aria-labelledby="modal-title" aria-modal="true" role="dialog">
+    <style type="text/css">
+        .col-label {
+            vertical-align: middle;
+        }
+    </style>
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="modal-title" class="modal-title w-100">// Upload Collection</h5>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <label for="collection-name-input" class="form-label">Collection Name</label>
+                    <input type="text" class="form-control" id="collection-name-input" required>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="overwrite-check">
+                    <label class="form-check-label" for="overwrite-check">Overwrite if exists</label>
+                </div>
+                <div class="mb-3">
+                    <label for="collection-codes-input" class="form-label">Collection Codes</label>
+                    (<small><i>Comma separated list of element codes.</i></small>)
+                    <textarea class="form-control" id="collection-codes-input" rows="5" required></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark nav-btn" id="btn-close">Close</button>
+                <button type="button" class="btn btn-primary nav-btn" id="btn-save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>

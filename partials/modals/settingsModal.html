@@ -1,0 +1,84 @@
+﻿<div id="settingsModal" class="modal fade" tabindex="-1" aria-labelledby="helpLabel" aria-modal="true" role="dialog">
+    <style type="text/css">
+        .col-label {
+            vertical-align: middle;
+        }
+    </style>
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="debugInfoLabel" class="modal-title w-100">// Settings</h5>
+            </div>
+            <div class="modal-body">
+                <div id="settins-tabs" class="tabs-root tabs-top" data-tabs-side="top">
+                    <div class="tabs-header">
+                        <button class="tab" data-tab-id="general">General</button>
+                        <button class="tab" data-tab-id="audio">Audio</button>
+                        <button class="tab" data-tab-id="collections">Collections</button>
+                    </div>
+
+                    <div class="tabs-body">
+                        <div class="tab-panel" data-tab-panel="general">
+                            <table class="table table-borderless w-100">
+                                <tr>
+                                    <td class="col-label"><label class="form-check-label" for="timer-mode-select">Timer</label></td>
+                                    <td>
+                                        <select id="timer-mode-select" name="timer-mode-select" class="form-select">
+                                            <option value="countdown">Countdown</option>
+                                            <option value="elapsed">Elapsed Only</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-panel" data-tab-panel="audio">
+                            <table class="table table-borderless w-100">
+                                <tr>
+                                    <td class="col-label"><label class="form-check-label" for="tts-voice-select">TTS Voice</label></td>
+                                    <td><select id="tts-voice-select" name="tts-voice-select" class="form-select"></select></td>
+                                </tr>
+                                <tr>
+                                    <td class="col-label"><label class="form-check-label" for="audio-enabled">Audio</label></td>
+                                    <td>
+                                        <div class="form-check form-switch">
+                                            <input id="audio-enabled" name="audio-enabled" class="form-check-input" type="checkbox" checked=checked />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-panel" data-tab-panel="collections">
+                            <table class="table table-borderless w-100">
+                                <tr>
+                                    <td class="col-label">Custom Collections Data</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-dark btn-outline-light">
+                                            <i class="fa fa-download"></i>
+                                            Download
+                                        </button>
+                                        <button class="btn btn-sm btn-dark btn-outline-light">
+                                            <i class="fa fa-upload"></i>
+                                            Upload
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-label">High Scores</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-dark btn-outline-light">
+                                            <i class="fa fa-download"></i>
+                                            Download
+                                        </button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark nav-btn" id="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

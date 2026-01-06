@@ -1,0 +1,91 @@
+﻿<div id="debugInfoModal" class="modal fade" tabindex="-1" aria-labelledby="debugInfoLabel" aria-modal="true" role="dialog">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="debugInfoLabel" class="modal-title w-100">// Debug Info</h5>
+            </div>
+            <div class="modal-body">
+
+                <table class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col" colspan="2"><h5>Quiz Key</h5></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Map:</th>
+                            <td id="key-map"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Quiz:</th>
+                            <td id="key-quiz"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Hard:</th>
+                            <td id="key-hard"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Kind:</th>
+                            <td id="key-kind"></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">High Score:</th>
+                            <td id="high-score"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col"><h5>Correct</h5></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="correct-container"></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th scope="col"><h5>Eventually Correct</h5></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="eventuallycorrect-container"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <table class="table table-sm table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col"><h5>Incorrect</h5></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="incorrect-container"></td>
+                        </tr>
+                    </tbody>
+                    <thead>
+                        <tr>
+                            <th scope="col"><h5>No Attempt</h5></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="noattempt-container"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark nav-btn" id="debuginfo-close">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

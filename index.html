@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>geoquizzer</title>
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+    <script src="./lib/loadr.js"></script>
+    <script type="module">
+        const bootstrapC = loadStylesheetWithFallback({
+            cdnSrc: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css",
+            localSrc: "./lib/bootstrap/css/bootstrap.min.css",
+            attrs: {
+                integrity: "sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB",
+                crossorigin: "anonymous"
+            }
+        });
+
+        const fontawesomeC = loadStylesheetWithFallback({
+            cdnSrc: "https://cdn.jsdelivr.net/npm/fontawesome-4.7@4.7.0/css/font-awesome.min.css",
+            localSrc: "./lib/fontawesome/css/font-awesome.min.css",
+            attrs: {
+                integrity: "sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=",
+                crossorigin: "anonymous"
+            }
+        });
+
+        await Promise.all([bootstrapC, fontawesomeC]);
+    </script>
+
+    <link rel="stylesheet" type="text/css" href="./styles/app.bundle.min.css" />
+</head>
+<body>
+    <nav id="nav-titlebar" class="navbar navbar-expand-md bg-body-tertiary py-2">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./images/logo/logo.svg" alt="logo" class="d-inline-block" />
+                <span>geoquizzer</span>
+                <span class="navbar-text" id="quiz-name"></span>
+            </a>
+        </div>
+    </nav>
+
+    <div id="nav-root"></div>
+
+    <div id="map-root" data-mapgeo="world"></div>
+
+    <div>
+        <table id="element-table" style="visibility: hidden">
+            <tbody>
+                <tr></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3">
+        <div id="copyToast"
+             class="toast align-items-center text-bg-dark border-0"
+             role="status"
+             aria-live="polite"
+             aria-atomic="true">
+            <div class="d-flex">
+                <div id="copyToastBody" class="toast-body"></div>
+                <button type="button" class="btn-close btn-dark me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="svgSelectorOffCanvas" aria-labelledby="offcanvasWithBackdropLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Path Info</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="offcanvas-content"></div>
+            <div class="offcanvas-footer">
+                <button type="button" id="copy-land" class="btn btn-outline-light">SVG Land Circle</button>
+                <button type="button" id="copy-island" class="btn btn-outline-light">SVG Island Circle</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        const bootstrapS = loadScriptWithFallback({
+            cdnSrc: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js",
+            localSrc: "./lib/bootstrap/js/bootstrap.bundle.min.js",
+            globalName: "bootstrap",
+            attrs: {
+                integrity: "sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI",
+                crossorigin: "anonymous",
+            }
+        });
+
+        await Promise.all([bootstrapS]);
+
+        await import("./js/app.bundle.min.js");
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TEZXZNTJYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-TEZXZNTJYG');
+    </script>
+</body>
+</html>

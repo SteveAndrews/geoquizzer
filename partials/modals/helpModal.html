@@ -1,0 +1,157 @@
+﻿<div id="helpModal" class="modal fade" tabindex="-1" aria-labelledby="helpLabel" aria-modal="true" role="dialog">
+    <style type="text/css">
+        .help-row .help-icons {
+            width: 160px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .help-row .help-text {
+            line-height: 1.25;
+        }
+
+            .help-row .help-text pre {
+                display: inline;
+                white-space: break-spaces;
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+
+        .notate {
+            font-weight: bold;
+            font-size: 22px;
+        }
+    </style>
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 id="debugInfoLabel" class="modal-title w-100">// Help</h5>
+            </div>
+            <div class="modal-body">
+                <h6>Zoom and Pan</h6>
+
+                <div class="row g-2 align-items-start mb-2 help-row">
+                    <div class="col-auto help-icons">
+                        <svg width="36" height="24" viewBox="0 0 36 24" class="me-1">
+                            <rect x="1" y="1" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="currentcolor">Ctrl</text>
+                        </svg>
+
+                        <span class="notate mx-1">+</span>
+
+                        <svg width="48" height="48" viewBox="0 0 48 48">
+                            <rect x="14" y="4" width="20" height="40" rx="10" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="19" y="0" width="10" height="18" rx="8" fill="currentColor" opacity="0.4"></rect>
+                            <rect x="22" y="10" width="4" height="8" rx="2" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="col help-text">
+                        Zoom in and out on the map using <pre>Ctrl</pre> + <pre>mouse wheel</pre>
+                    </div>
+                </div>
+
+                <div class="row g-2 align-items-start mb-2 help-row">
+                    <div class="col-auto help-icons">
+                        <svg width="36" height="24" viewBox="0 0 36 24" class="me-1">
+                            <rect x="1" y="1" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="currentcolor">Ctrl</text>
+                        </svg>
+
+                        <span class="notate mx-1">+</span>
+
+                        <svg width="48" height="48" viewBox="0 0 48 48">
+                            <rect x="14" y="4" width="20" height="40" rx="10" fill="none" stroke="currentColor" stroke-width="2" />
+                            <rect x="14" y="4" width="10" height="14" rx="5" fill="currentColor" opacity="0.4" />
+                            <rect x="22" y="10" width="4" height="8" rx="2" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <div class="col help-text">
+                        When zoomed in, <pre>Ctrl</pre> + <pre>left mouse button</pre> and dragging will pan the map
+                    </div>
+                </div>
+
+                <hr />
+                <h6>Keyboard Commands</h6>
+
+                <div class="row g-2 align-items-start mb-2 help-row">
+                    <div class="col-auto help-icons">
+                        <svg width="36" height="24" viewBox="0 0 36 24">
+                            <rect x="1" y="1" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="currentcolor">S</text>
+                        </svg>
+                    </div>
+                    <div class="col help-text">
+                        For click-based quizzes, will <pre>S</pre>kip the current target
+                    </div>
+                </div>
+
+                <div class="row g-2 align-items-start mb-2 help-row">
+                    <div class="col-auto help-icons">
+                        <svg width="36" height="24" viewBox="0 0 36 24">
+                            <rect x="1" y="1" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="currentcolor">D</text>
+                        </svg>
+                    </div>
+                    <div class="col help-text">
+                        For click-based quizzes, will mark the current target as "<pre>D</pre>on't know"
+                    </div>
+                </div>
+
+                <div class="row g-2 align-items-start mb-2 help-row">
+                    <div class="col-auto help-icons">
+                        <svg width="36" height="24" viewBox="0 0 36 24" class="me-1">
+                            <rect x="1" y="1" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="currentcolor">Ctrl</text>
+                        </svg>
+
+                        <span class="notate mx-1">+</span>
+
+                        <svg width="36" height="24" viewBox="0 0 36 24">
+                            <rect x="1" y="1" width="34" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2" />
+                            <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-size="10" fill="currentcolor">Q</text>
+                        </svg>
+                    </div>
+                    <div class="col help-text">
+                        <pre>Q</pre>uits the curent quiz and shows the quiz selection dialogue
+                    </div>
+                </div>
+
+                <!--<hr />
+                <h6>Shorthand</h6>
+
+                <table class="table table-borderless table-sm w-100">
+                    <tr>
+                        <td><pre>BIOT</pre></td>
+                        <td>British India Ocean Territory</td>
+                    </tr>
+                    <tr>
+                        <td><pre>Congo</pre></td>
+                        <td>Republic of the Congo</td>
+                    </tr>
+                    <tr>
+                        <td><pre>DR</pre></td>
+                        <td>Dominican Republic</td>
+                    </tr>
+                    <tr>
+                        <td><pre>DRC</pre></td>
+                        <td>Democratic Republic of the Congo</td>
+                    </tr>
+                    <tr>
+                        <td><pre>PR</pre></td>
+                        <td>Puerto Rico</td>
+                    </tr>
+                    <tr>
+                        <td><pre>USMOI</pre></td>
+                        <td>U.S. Minor Outlying Islands</td>
+                    </tr>
+                </table>-->
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-dark nav-btn" id="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
