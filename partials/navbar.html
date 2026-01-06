@@ -1,0 +1,80 @@
+﻿<nav id="nav-gamebar" class="navbar navbar-expand-md bg-body-tertiary border-bottom py-2">
+    <div class="container-fluid d-flex align-items-center position-relative">
+
+        <ul class="navbar-nav gap-4">
+            <li id="progress-area" class="nav-item element-hide">
+                <span id="progress-label" class="menu-label d-block">Progress</span>
+                <span id="progress-counter" class="menu-value" title="Correct / Total">0 / 0</span>
+            </li>
+            <li id="correct-area" class="nav-item element-hide">
+                <span class="menu-label d-block">Correct</span>
+                <span id="correct-counter" class="menu-value" title="Correct">0</span>
+            </li>
+            <li id="missed-area" class="nav-item element-hide">
+                <span class="menu-label d-block">Misses</span>
+                <span id="misses-counter" class="menu-value" title="Misses">0</span>
+            </li>
+            <li id="percent-area" class="nav-item element-hide">
+                <span class="menu-label d-block">Percentage</span>
+                <span id="percent-counter" class="menu-value" title="Percentage">0%</span>
+            </li>
+            <li id="timer-area" class="nav-item element-hide">
+                <span id="timer-label" class="menu-label d-block">Time Remaining</span>
+                <span id="timer-display" class="menu-value timer">15:00</span>
+            </li>
+            <li id="timer-button-area">
+                <button id="pause-resume-timer-btn" class="btn btn-sm btn-outline-dark ml-2" title="Pause timer"><i class="fa fa-pause"></i></button>
+                <button id="cancel-timer-btn" class="btn btn-sm btn-outline-dark ml-2" title="Cancel timer"><i class="fa fa-stop"></i></button>
+            </li>
+            <li id="give-up-area">
+                <button id="give-up" class="btn btn-outline-dark ml-2" title="Give up"><i class="fa fa-flag-checkered"></i></button>
+            </li>
+        </ul>
+
+        <div id="center-slot" class="position-absolute start-50 translate-middle-x"></div>
+
+        <div class="d-flex align-items-center gap-3 ms-auto">
+            <div class="dropdown">
+                <button class="btn" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                        <button id="new-quiz" class="dropdown-item text-danger" type="button"><i class="fa fa-plus"></i> New quiz</button>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li class="dropdown-header">Settings</li>
+                    <li id="audio-area" class="px-3 py-1">
+                        <div class="row">
+                            <div class="col">
+                                <i id="volume-icon" class="fa fa-fw fa-volume-up"></i>
+                                <label class="form-check-label" for="audio-on">Audio</label>
+                            </div>
+                            <div class="col-auto form-check form-switch">
+                                <input id="audio-on" name="audio-on" class="form-check-input" type="checkbox" checked=checked />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <button id="more-settings" class="dropdown-item" type="button"><i class="fa fa-cogs"></i> More settings...</button>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                        <button id="high-scores" class="dropdown-item" type="button"><i class="fa fa-trophy"></i> High scores</button>
+                    </li>
+                    <li>
+                        <button id="help-info" class="dropdown-item" type="button"><i class="fa fa-question-circle"></i> Help</button>
+                    </li>
+                    <li>
+                        <button id="about-info" class="dropdown-item" type="button"><i class="fa fa-info-circle"></i> About</button>
+                    </li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li>
+                        <button id="debug-info" class="dropdown-item" type="button"><i class="fa fa-bug"></i> Debug info</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</nav>
